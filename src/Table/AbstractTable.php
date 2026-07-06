@@ -6,7 +6,7 @@ namespace WeDevelop\UXTable\Table;
 
 use Knp\Component\Pager\Pagination\PaginationInterface;
 use Knp\Component\Pager\PaginatorInterface;
-use Symfony\Component\DependencyInjection\Attribute\TaggedLocator;
+use Symfony\Component\DependencyInjection\Attribute\AutowireLocator;
 use Symfony\Component\DependencyInjection\ServiceLocator;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -28,7 +28,7 @@ abstract class AbstractTable implements TableInterface
     private ?PaginationInterface $pagination = null;
 
     public function __construct(
-        #[TaggedLocator(DataProviderInterface::class)]
+        #[AutowireLocator(DataProviderInterface::class)]
         private readonly ServiceLocator $dataProviders,
         private readonly FormFactoryInterface $formFactory,
     ) {
