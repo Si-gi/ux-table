@@ -1,5 +1,6 @@
 {
     "name": "wedevelopnl/ux-table",
+    "description": "Symfony UX Table with search, filter and sorting options.",
     "type": "symfony-bundle",
     "license": "MIT",
     "keywords": ["symfony-ux"],
