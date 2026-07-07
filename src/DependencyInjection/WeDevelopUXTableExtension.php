@@ -71,7 +71,7 @@ final class WeDevelopUXTableExtension extends Extension implements PrependExtens
         }
     }
 
-    public function prepend(ContainerBuilder $container)
+    public function prepend(ContainerBuilder $container): void
     {
         if ($this->isAssetMapperAvailable($container)) {
             $container->prependExtensionConfig('framework', [
